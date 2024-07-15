@@ -1,4 +1,160 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sam Tripp</title><link>https://www.samtripp.co.uk/</link><description>The personal website of Sam Tripp</description><generator>Hugo -- gohugo.io</generator><language>en-GB</language><lastBuildDate>Mon, 29 Apr 2024 16:10:00 +0100</lastBuildDate><atom:link href="https://www.samtripp.co.uk/index.xml" rel="self" type="application/rss+xml"/><item><title>Terraforming my Cloudflare configuration</title><link>https://www.samtripp.co.uk/posts/terraforming-my-cloudflare-configuration/</link><pubDate>Mon, 29 Apr 2024 16:10:00 +0100</pubDate><guid>https://www.samtripp.co.uk/posts/terraforming-my-cloudflare-configuration/</guid><description>&lt;p>A couple of weeks ago I was having a conversation with a friend regarding Cloudflare. He was saying how it is not uncommon for people to make configuration changes using the Cloudflare UI potentially introducing breaking changes that could go unnoticed. I meantioned that with Infrastructure-as-Code implemented there is no excuse for this to happen. I also came to a realisation that I do not practice what I preached so to rectify this I have decided to capture my Cloudflare configuration into my Infrastructure-as-Code tool of choice Terraform.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sam Tripp</title><link>https://www.samtripp.co.uk/</link><description>The personal website of Sam Tripp</description><generator>Hugo -- gohugo.io</generator><language>en-GB</language><lastBuildDate>Mon, 15 Jul 2024 22:10:00 +0100</lastBuildDate><atom:link href="https://www.samtripp.co.uk/index.xml" rel="self" type="application/rss+xml"/><item><title>3 Weeks island hopping in Thailand</title><link>https://www.samtripp.co.uk/posts/3-weeks-island-hopping-in-thailand/</link><pubDate>Mon, 15 Jul 2024 22:10:00 +0100</pubDate><guid>https://www.samtripp.co.uk/posts/3-weeks-island-hopping-in-thailand/</guid><description>&lt;p>This blog post is just a collection of bullet points regarding mine and my wifes trip around Thailand. There is a lot of information online about this great country but it can be a problem to get accurate answers due to some of the information being quite dated. Hopefully my first hand experience will help someone.&lt;/p>
+&lt;h1 id="departing-uk-side">Departing UK side&lt;/h1>
+&lt;ul>
+&lt;li>Booked to fly with EVA AIR. With it being an overnight flight I was able to take a half day on the Friday ensure we made the most of our time.
+&lt;ul>
+&lt;li>We had to move our flights from February to May/June due to unforeseen circumstances. I was able to do this online with EVA AIR for the fee of £100.&lt;/li>
+&lt;li>We were able to check in at the airport free of charge.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>National Express from Bristol to Heathrow was delayed. Fortunately giving ourselves plenty of time this did not impact us but would certainly give myself plenty of breathing room flying from Heathrow again.&lt;/li>
+&lt;li>Heathrow was a well oiled machine. Everything straightforward from check in to boarding the flight. Not my first time flying from Heathrow but always impressed with its operation.&lt;/li>
+&lt;li>The Flight
+&lt;ul>
+&lt;li>A meal was provided shortly after takeoff. Did not expect this.&lt;/li>
+&lt;li>We got another meal aproximately a couple of hours prior to landing in Bangkok.&lt;/li>
+&lt;li>Seats were quite snug in economy.&lt;/li>
+&lt;li>Earplugs &amp;amp; Eyemask I brought with me did help with me getting a few hours sleep on the plane.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="landing-in-bangkok">Landing in Bangkok&lt;/h1>
+&lt;ul>
+&lt;li>We were doing a self transfer from Bangkok to a flight to Chiang Mai&lt;/li>
+&lt;li>We were through passport control and had our bags within 30 - 40 minutes&lt;/li>
+&lt;li>We did not requre to fill out a landing card as British citizens which was a change from our previous visit in 2018&lt;/li>
+&lt;li>I was able to pick up a tourist sim card in the baggage collection area.
+&lt;ul>
+&lt;li>A passport must be provided to get a Sim Card in Thailand. This is practically unavoidable.&lt;/li>
+&lt;li>Sim cost approximately £25 for unlimited data with True Mobile for 1 month. Other providers were there but went with True as I could pay for the sim with a credit card.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Once passed through the security checkpoints and in the arrival hall make way to the 4th Floor to get to departures for the next flight.&lt;/li>
+&lt;li>Was able to check in immediately and go through domestic departures security checkpoint.&lt;/li>
+&lt;li>Once past the security checkpoint your limited to vending machines for any food and beverages so worth keeping in mind if you have time to spare.&lt;/li>
+&lt;li>Overall the process was painless and would self transfer again for a domestic flight.&lt;/li>
+&lt;/ul>
+&lt;h1 id="chiang-mai">Chiang Mai&lt;/h1>
+&lt;ul>
+&lt;li>Baggage collection again was straightforward.&lt;/li>
+&lt;li>Download Grab onto your mobile phone for taxi services in Chiang Mai including getting to and from the airport&lt;/li>
+&lt;li>To get to the grab pick up point exit the airport and turn left. Keep walking until you see a grab shelter&lt;/li>
+&lt;li>Was picked up in seconds for 150฿&lt;/li>
+&lt;li>Stayed &lt;a href="https://www.booking.com/Share-aYjCaF">Glory Suites&lt;/a>
+&lt;ul>
+&lt;li>Hotel was lovely well furnished, had a rooftop pool and reseraunt which served great food&lt;/li>
+&lt;li>Slightly far from the tourist areas but with Grab accessible and affordable this was not much of a problem.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Most of the tourist/expat entertainment happens around Loi Kroh Rd, the night bazaar and near Moon Muang.&lt;/li>
+&lt;li>Visited multiple temples in Chiang Mai. If you choose to visit one I would reccomend Wat Chedi Luang. There is a seperate entrance for tourists. Entry cost around 50฿ per person.&lt;/li>
+&lt;li>There was an incredible resteraunt across the road from Wat Chedi Luang called Sattaya Izakaya. Would reccomended the skewers as they were excellent.&lt;/li>
+&lt;li>Biggest regret was not being more prepared for Chiang Mai. Whilst there is plenty to keep you busy for a couple of days in Chiang Mai city there is a lot more offered further out of the city. Would reccomend others to look up some excursions before arriving. Plenty of tour operators to book from inside Chiang Mai so booking online in advance may not be nessecary.&lt;/li>
+&lt;/ul>
+&lt;h1 id="koh-samui">Koh Samui&lt;/h1>
+&lt;ul>
+&lt;li>Grab is not an option from the airport. When you collect your luggage you can (and probably should) book a taxi at the desk in the luggage collection area. SmackONE I believe the company was called. A taxi to Chewang cost 400฿ for 2 people.&lt;/li>
+&lt;li>Stayed &lt;a href="https://www.booking.com/Share-j6CH8H">J4 Samui Hotel&lt;/a>.&lt;/li>
+&lt;li>As a guest at this hotel you get to utilise the pool and beach at Chewang Gardens which is right next to J4.&lt;/li>
+&lt;li>Room is quite close to the strip in Chewang and is right next to ARKBar. Whilst we found the rooms adequately soundproofed if you&amp;rsquo;re sensitive to sound you may want to use some earplugs.&lt;/li>
+&lt;li>If you like to do a bit of shopping Chewang has a large shopping center with a lot of large well known brand and a great food court.&lt;/li>
+&lt;li>Thai massages and various beauty treatments are plentiful in Chewang so be sure to utilise this whilst you&amp;rsquo;re here.&lt;/li>
+&lt;li>A large number of places will take Mastercard but fully expect to pay a minimum of 3% extra in most places. I believe this is to cover Mastercard fees.&lt;/li>
+&lt;li>Despite a lot of reports saying this is not the place to go and see tropical fish we saw a fair amount when we went snorkeling on the beach.&lt;/li>
+&lt;li>The beach in Chewang was delightful and we spent a lot of our time here. - The staff at Chewang gardens were very friendly and do go above and beyond. Worth considering staying there for the excellent service alone.&lt;/li>
+&lt;li>When departing to go to Koh Phanagan we used Grab to take us to Bangrak pier which was the nearest ferry port to Chewang.
+&lt;ul>
+&lt;li>Due to weather conditions we had to sail from Nanthon pier but the transfer to there was provided by Lompayah free of charge.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="koh-pha-ngan">Koh Pha-ngan&lt;/h1>
+&lt;ul>
+&lt;li>This is a notorious party island and home of the infamous full moon party and many other parties in between. Despite this if you&amp;rsquo;re not looking to party like us you can completely avoid it. You probably would want to avoid Haad Rin though if you do not intend to do a lot of partying.&lt;/li>
+&lt;li>We stayed in the Baan Tai area of the island&lt;/li>
+&lt;li>Speedboat to Koh Pha-ngan cost 350฿ each booked directly via &lt;a href="https://lomprayah.com/">Lomprayah&lt;/a>&lt;/li>
+&lt;li>Taxi cost 400฿ from Thong Sala port to hotel. We captured ours from the car park outside the port.&lt;/li>
+&lt;li>Stayed &lt;a href="https://www.booking.com/Share-1UZKiRv">Pratchee Resort&lt;/a>.
+&lt;ul>
+&lt;li>We were the only people staying on the resort during our entire stay. It was a tranqual peaceful paradise which was something I did not expect from this island.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Did not roam far from this area of the island. Managed to get sunburnt and didn&amp;rsquo;t fancy making the problem any worse.&lt;/li>
+&lt;li>If you did wish to roam the island moped rental shops are plentiful.&lt;/li>
+&lt;li>Nearest 7/11 was aproximately 7 minute walk from hotel.&lt;/li>
+&lt;li>Baan Tai Night Market catered to most of our entertainment needs whilst we were here. Plenty of food to sample here along with some excellent cocktails. Live music was on each night also.&lt;/li>
+&lt;li>Cash is king on the island. With the exception of 7/11 and the hotel I did not notice card being accepted. Fortunately there are multiple ATMs near the 7/11.&lt;/li>
+&lt;li>Krungsai Bank ATM fee was 220฿. Probably the cheapest you will find in the area.&lt;/li>
+&lt;/ul>
+&lt;h1 id="koh-tao">Koh Tao&lt;/h1>
+&lt;ul>
+&lt;li>Ferry to Koh Tao cost 600฿ each booked directly via &lt;a href="https://lomprayah.com/">Lomprayah&lt;/a>&lt;/li>
+&lt;li>Getting off the boat was quite chaotic as we had to get the bags from the front of the boat and then exit the back but there was no structure to this and it was a complete free for all.&lt;/li>
+&lt;li>To enter Koh Tao you need to pay a 20฿ pier fee. This usually is not included in your ferry fee.&lt;/li>
+&lt;li>Our accomodation offered a free transfer to the hotel. It appeared many others did also so worth considering taking up their offer if availible.&lt;/li>
+&lt;li>We stayed at &lt;a href="https://www.booking.com/Share-79ChBA">Koh Tao Beach Club&lt;/a> on Mae Head Beach.
+&lt;ul>
+&lt;li>We have a Beach Bungalow. It was lovely to be on the front of the beach.&lt;/li>
+&lt;li>Internet access was very unreliable and when it did work was very poor. Mobile signal also was nonexistant so tethering was not an option.&lt;/li>
+&lt;li>We were able to get clothes washed with a 24h turnaround arranged by the hotel. Cost was 50฿ per kg.&lt;/li>
+&lt;li>If you paid for breakfast in your room rate be sure to get your coupons on check in.&lt;/li>
+&lt;li>Would be happy enough to stay there again if the price was right however would consider staying on Sairee Beach if there was a next time as that appears to be a very popular location on the island.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>We booked a snorkeling excursion with &lt;a href="https://www.oxygentourskohtao.com/">Oxygen&lt;/a>. They did 5 stops in great scuba locations around the island. The tour was well ran and all the staff we&amp;rsquo;re very helpful. We managed to swin with giant turtles at one of the locations. We were able to book this via our hotel but you do see a lot of advertisements of theirs along Sairee beach&lt;/li>
+&lt;li>I did a try dive with &lt;a href="https://www.phoenixdiverskohtao.com">Phoenix Divers&lt;/a>. It cost 3500฿ for 2 dive try dive, diving theory and a practice in their pool.
+&lt;ul>
+&lt;li>I was able to arrange the majority of this via Whatsapp. They were very responsive. I just needed to pop down to their site on Sairee Beach to fill out paperwork and pay.&lt;/li>
+&lt;li>I loved this experienced and I am hooked. Regretted not booking the Open Water Diving course but unfortunately time was not on my side. I will be doing this in the near future.&lt;/li>
+&lt;li>Koh Tao is renound for diving globally so if you are curious about diving this is certainly the place to try it.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>We had plenty of nice food in Koh Tao but the one place that stood out was Sandbar. They did a BBQ platter which was absolutely fantastic.&lt;/li>
+&lt;/ul>
+&lt;h1 id="bangkok">Bangkok&lt;/h1>
+&lt;ul>
+&lt;li>To get back to Bangkok it was a ferry back to Chumpthon and then a night train&lt;/li>
+&lt;li>We booked a ferry/taxi combined ticket via &lt;a href="https://12go.asia/">12go.asia&lt;/a> as there appeared no way to do this online via Lomprayah.&lt;/li>
+&lt;li>We booked the night train back from Chumpthon to Krung Thep Aphiwat (Bangkok) via the &lt;a href="https://www.dticket.railway.co.th/">State Railway of Thailand D-Ticket site&lt;/a>
+&lt;ul>
+&lt;li>First class private room cost 2180฿ for the two of us.&lt;/li>
+&lt;li>You can only book these tickets usually 1 month in advance.&lt;/li>
+&lt;li>The D-Ticket website was incredibly slow to operate from the UK so patience would be needed. It was however very fast when accessed in Thailand.&lt;/li>
+&lt;li>Was able to get some sleep. Was not the most comfortable journey in the world but beats an 8 hour coach to Bangkok&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>We probably gave ourselves far too much time to be on the safe side. If I was to do this again I would probably book on the first night train availible after arriving via boat to Chumpthon&lt;/li>
+&lt;li>We arrived in Bangkok at 6:30.&lt;/li>
+&lt;li>We got a Grab to our accomodation.&lt;/li>
+&lt;li>We stayed at &lt;a href="https://www.booking.com/Share-H6eqVu">Villa de Khaosan&lt;/a> which is on the corner of the famous backpackers street of Khaosan Road.
+&lt;ul>
+&lt;li>Would stay again accomodation was comfortable and location was perfect.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>We visited Jim Thompsons House Museum whilst we stayed.
+&lt;ul>
+&lt;li>Jim Thompson was a famous silk merchant based in Thailand who was largely considered to have saved the Thai silk industry&lt;/li>
+&lt;li>This was a very insightful and informative tour which I was glad to do. My wife was especially happy to see this being a keen textile artist.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>We paid a visit to the MBK Shopping Center as it was near Jim Thompsons House.
+&lt;ul>
+&lt;li>Given its size and boasting about a considerable sum of shops I was not particularly impressed. Felt more like a bazaar over a western standard shopping mall.&lt;/li>
+&lt;li>Food Court was good and had plenty of choice if you did want to eat nearby.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Grab back to Khaosan road was pretty slow due to Bangkok traffic.&lt;/li>
+&lt;/ul>
+&lt;h1 id="back-to-the-uk">Back to the UK&lt;/h1>
+&lt;ul>
+&lt;li>Got a Grab from the accomodation to airport. Worth noting that your quoted price does not include tolls but the driver can and will add them at the end of your journey. The driver was upfront about this.&lt;/li>
+&lt;li>Check in and security was seamless and nothing of noteworthy.&lt;/li>
+&lt;li>We were able to get a tax refund on some items. If you&amp;rsquo;re buying any expensive products this is worth considering. The refund took a couple of minutes to process. Refund was paid in cash.&lt;/li>
+&lt;li>Managed to get emergency exit seats on the way back. On a 12 hour flight the extra legroom is a blessing.&lt;/li>
+&lt;li>When landing in Heathrow boarder control queue was quite long but didn&amp;rsquo;t take much longer than 10 minutes to pass through.&lt;/li>
+&lt;li>Baggage collection was quite slow.&lt;/li>
+&lt;li>We were able to get on the National Express an hour earlier than planned thanks to the very friendly driver letting us on. Will be booking National Express to Heathrow next time just because of that alone.&lt;/li>
+&lt;/ul></description></item><item><title>Terraforming my Cloudflare configuration</title><link>https://www.samtripp.co.uk/posts/terraforming-my-cloudflare-configuration/</link><pubDate>Mon, 29 Apr 2024 16:10:00 +0100</pubDate><guid>https://www.samtripp.co.uk/posts/terraforming-my-cloudflare-configuration/</guid><description>&lt;p>A couple of weeks ago I was having a conversation with a friend regarding Cloudflare. He was saying how it is not uncommon for people to make configuration changes using the Cloudflare UI potentially introducing breaking changes that could go unnoticed. I meantioned that with Infrastructure-as-Code implemented there is no excuse for this to happen. I also came to a realisation that I do not practice what I preached so to rectify this I have decided to capture my Cloudflare configuration into my Infrastructure-as-Code tool of choice Terraform.&lt;/p>
 &lt;p>Cloudflare handles a number of things for me on this domain but most notably it handles my DNS records for this website and my emails. An outages of either of these would not be ideal for me so to avoid this we are going to use &lt;a href="https://github.com/cloudflare/cf-terraforming">cf-terraforming&lt;/a> to generate Terraform code based on my current DNS configuration in the Cloudflare UI and to generate the terraform import commands so I can import my Cloudflare configuration into my Terraform state.&lt;/p>
 &lt;h1 id="building-the-application">Building the application&lt;/h1>
 &lt;p>Unfortunately cf-terraforming is not packaged in the Debian repositories and there is no flatpak or snap availible for it so we do have to resort to building it. If you&amp;rsquo;re following along on a Macbook there is a brew package for this which would save some time. Fortunately building this was incredibly straigtforward:&lt;/p>
