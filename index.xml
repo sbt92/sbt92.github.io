@@ -1,4 +1,289 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sam Tripp</title><link>https://www.samtripp.co.uk/</link><description>The personal website of Sam Tripp</description><generator>Hugo -- gohugo.io</generator><language>en-GB</language><lastBuildDate>Mon, 15 Jul 2024 22:10:00 +0100</lastBuildDate><atom:link href="https://www.samtripp.co.uk/index.xml" rel="self" type="application/rss+xml"/><item><title>3 Weeks island hopping in Thailand</title><link>https://www.samtripp.co.uk/posts/3-weeks-island-hopping-in-thailand/</link><pubDate>Mon, 15 Jul 2024 22:10:00 +0100</pubDate><guid>https://www.samtripp.co.uk/posts/3-weeks-island-hopping-in-thailand/</guid><description>&lt;p>This blog post is just a collection of bullet points regarding mine and my wifes trip around Thailand. There is a lot of information online about this great country but it can be a problem to get accurate answers due to some of the information being quite dated. Hopefully my first hand experience will help someone.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sam Tripp</title><link>https://www.samtripp.co.uk/</link><description>The personal website of Sam Tripp</description><generator>Hugo -- gohugo.io</generator><language>en-GB</language><lastBuildDate>Tue, 30 Jul 2024 08:00:00 +0100</lastBuildDate><atom:link href="https://www.samtripp.co.uk/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating a subscription-free ChatGPT Plus alternative</title><link>https://www.samtripp.co.uk/posts/creating-a-subscription-free-chatgpt-plus-alternative/</link><pubDate>Tue, 30 Jul 2024 08:00:00 +0100</pubDate><guid>https://www.samtripp.co.uk/posts/creating-a-subscription-free-chatgpt-plus-alternative/</guid><description>&lt;p>AI has taken the world by storm over the past 18 months with many people utilising it in many ways. One of the most popular ways of interacting with AI is using ChatGPT. Like most modern software OpenAI&amp;rsquo;s ChatGPT offers a free tier as well as their subscription called ChatGPT Plus which offers more features and a selection of Large Language Models.&lt;/p>
+&lt;p>A friend of mine has been using ChatGPT Plus. Key reasons he was paying for the Plus subscription was to ensure he had access to it whenever he needed which is something that is not guaranteed on the free tier. However at $20 a month he is questioning if he used it enough to warrant paying the monthly subscription cost. He said if the cost was lower he would be happy to continue paying for it. I had to agree with him as a casual user myself I could never justify that expense. This is when I went to explore the option of building a ChatGPT Plus like experience at a lower cost.&lt;/p>
+&lt;h1 id="how-did-i-do-this">How did I do this&lt;/h1>
+&lt;p>To grant ourselves access to our very own ChatGPT like experience we are going to use 2 tools:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://docs.openwebui.com/">Open WebUI&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://platform.openai.com/">OpenAI API&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;h2 id="sign-up-to-openai-and-generate-an-api-key">Sign up to OpenAI and generate an API Key.&lt;/h2>
+&lt;p>If you have not done so already create an account at &lt;a href="https://platform.openai.com/">https://platform.openai.com/&lt;/a>. Once you&amp;rsquo;ve done this navigate to the &lt;a href="https://platform.openai.com/api-keys">API Key Page&lt;/a>. There is a bizarre restriction which means you need to enter a mobile phone number before you can generate your first API Key. As this is only used one time, I purchased a sim card at the supermarket and registered that number against the account. Feel free to use your own personal phone number if you wish. Once this is done generate an API Key.&lt;/p>
+&lt;p>You need to go and add credit to your account to actually be able to use the API. To do this navigate to the billing page and add some credit to your account. I decided on just adding the minimum to my account which is $5 + VAT.&lt;/p>
+&lt;p>You now have an account and access to OpenAI&amp;rsquo;s API.&lt;/p>
+&lt;h2 id="set-up-open-webui">Set up Open WebUI&lt;/h2>
+&lt;p>There are a number of ways to set up Open WebUI but the recommended process is using Docker so before you go any further ensure you have got this set up. Once that has been completed run the command below. Make sure you&amp;rsquo;re replacing &lt;strong>&amp;lt;your_generated_api_key&amp;gt;&lt;/strong> with your OpenAI API key that you have generated.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-docker" data-lang="docker">&lt;span class="line">&lt;span class="cl">docker run -d -p 3000:8080 -e &lt;span class="nv">OPENAI_API_KEY&lt;/span>&lt;span class="o">=&lt;/span>&amp;lt;your_generated_api_key&amp;gt; -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="start-prompting">Start prompting&lt;/h2>
+&lt;p>Navigate to &lt;a href="https://localhost:3000">https://localhost:3000&lt;/a> in your web browser. Create an account, login, select a model of your choice in the dropdown at the top left of the page and start using it as you would with ChatGPT. At the time of writing the gpt-4o-mini model is OpenAI&amp;rsquo;s most cost effective model.&lt;/p>
+&lt;h1 id="how-does-it-compare">How does it compare&lt;/h1>
+&lt;h2 id="cost">Cost&lt;/h2>
+&lt;p>I created the prompt &amp;ldquo;Can you give me the number of workdays between December and April. I do not work weekends or UK bank holidays.&amp;rdquo; using the gpt-4o model and that costs approximately $0.01. You would have to put 2000 equivalent requests within a month to break even with the ChatGPT Plus subscription cost. If you put the same request through gpt-4o-mini it costs $0.0005 which means you would need to put 40000000 equivalent requests to break even.&lt;/p>
+&lt;p>If you&amp;rsquo;re heavy user you may exceed the 2000 requests but if you&amp;rsquo;re a casual user such as myself then the API proves to be considerably better value than ChatGPT Plus. I would be surprised if many if any exceed the gpt-4o-mini break even cost.&lt;/p>
+&lt;h2 id="convenience">Convenience&lt;/h2>
+&lt;p>ChatGPT Plus wins here but as you can see it does not take an awful lot of effort to get this up and running. Personally for me the small convenience sacrifice pays off considerably in terms of fiscal savings for the casual user.&lt;/p>
+&lt;h2 id="quality-of-response">Quality of response&lt;/h2>
+&lt;p>My friend still had access to his ChatGPT Plus subscription so we have done some comparisons to check the quality of the responses from the API against the responses from ChatGPT Plus. All responses below were ran against the gpt-4o model.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>What are 5 creative things I could do with my kids&amp;rsquo; art? I don&amp;rsquo;t want to throw them away, but it&amp;rsquo;s also so much clutter.
+&lt;details>
+&lt;summary>ChatGPT Plus Response&lt;/summary>
+&lt;div>&lt;p>Finding creative ways to preserve and display your kids&amp;rsquo; art can be a wonderful way to honor their creativity while managing clutter. Here are five ideas:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Create a Rotating Gallery: Designate a space in your home, like a wall or a bulletin board, as a rotating gallery for your kids&amp;rsquo; artwork. You can frame a few pieces or use clipboards, wire with clips, or magnetic strips to easily change the display. This way, the art can be regularly updated, and older pieces can be stored or used in other projects.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Make a Digital Archive and Photo Book: Scan or photograph your children&amp;rsquo;s artwork and create a digital archive. You can use these images to make a photo book, which is a compact and organized way to keep the art accessible. Many online services allow you to customize and print these books, making them a wonderful keepsake.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Create Art Collages or Murals: Take pieces of their artwork and cut out favorite sections or elements to create a large collage or mural. This can be a fun project for the whole family and a unique way to blend different pieces into one large, cohesive artwork.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Turn Art into Gifts or Home Décor: Transform their art into gifts or home décor items. You can print their drawings on mugs, t-shirts, cushions, or even create custom puzzles. These make great personalized gifts for family members or unique decorative items for your home.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Make an Art Book or Portfolio: Create a special art book or portfolio for each child where you can store and organize their artwork. This helps in reducing clutter and makes it easy to look back on their creative growth over the years. You can categorize the pieces by date or theme and add notes or stories about each piece.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>These ideas can help you cherish your children&amp;rsquo;s artistic expressions while keeping your home organized and clutter-free.&lt;/p>
+&lt;/div>
+&lt;/details>
+&lt;details>
+&lt;summary>OpenAI API Response&lt;/summary>
+&lt;div>&lt;p>Absolutely, finding creative ways to preserve and showcase your kids&amp;rsquo; artwork can be both fun and practical. Here are five ideas:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Create a Rotating Gallery:&lt;/strong> Dedicate a wall or a section of a wall in your home to be a gallery for your kids&amp;rsquo; artwork. Use frames, clipboards, or a wire with clothespins to create a rotating display. You can change the displayed pieces every few weeks or months, giving each piece its moment to shine without overwhelming your space.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Make a Photo Book:&lt;/strong> Scan or photograph the artwork and create a professional-looking photo book. There are many online services that allow you to design custom photo books. This way, you can keep the original works stored safely while enjoying the collection in a compact, accessible form.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Turn Art into Gifts:&lt;/strong> Use the artwork to create personalized gifts for family members. Some ideas include:&lt;/p>
+&lt;ul>
+&lt;li>Printing their art on mugs, t-shirts, or tote bags.&lt;/li>
+&lt;li>Using the drawings to create custom calendars or greeting cards.&lt;/li>
+&lt;li>Making a set of coasters with their art laminated or encased in resin.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Create a Digital Slideshow:&lt;/strong> Digitize the artwork and set up a digital photo frame or a smart display in your home to show a continuous slideshow of the art. It will free up physical space while still celebrating your child&amp;rsquo;s creativity.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Make Collages or Scrapbooks:&lt;/strong> Combine several pieces of artwork into a larger collage or scrapbook. This can be a seasonal activity where you make collages that reflect the art produced over a certain period. Kids can get involved in the process, helping to cut, arrange, and glue their works, which makes it a fun and engaging family project.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>These creative ideas can help you manage the clutter while still cherishing and celebrating the special art your kids create.&lt;/p>
+&lt;/div>
+&lt;/details>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Tell me a random fun fact about the Roman Empire
+&lt;details>
+&lt;summary>ChatGPT Plus Response&lt;/summary>
+&lt;div>The Roman Empire was known for its impressive engineering feats, including the construction of a vast network of roads. One fun fact is that the saying &amp;ldquo;All roads lead to Rome&amp;rdquo; originates from the Roman Empire&amp;rsquo;s extensive road system. By the peak of the empire, this network spanned over 400,000 kilometers (approximately 250,000 miles), with around 80,000 kilometers (about 50,000 miles) of paved roads. These roads were crucial for the movement of troops, trade, and communication across the vast territories of the empire.&lt;/div>
+&lt;/details>
+&lt;details>
+&lt;summary>OpenAI API Response&lt;/summary>
+&lt;div>Sure! Did you know that the Romans had a highly advanced form of concrete that was incredibly durable? One of the key ingredients they used was volcanic ash, which allowed the concrete to set underwater and contributed to the longevity of many Roman structures. This special mix made their piers, aqueducts, and buildings remarkably resilient, many of which still stand today. This ancient recipe has even been studied by modern engineers to improve contemporary construction materials!&lt;/div>
+&lt;/details>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Show me a code snippet of a website&amp;rsquo;s sticky header in CSS and JavaScript.
+&lt;details>
+&lt;summary>ChatGPT Plus Response&lt;/summary>
+&lt;div>&lt;p>To create a sticky header for a website, you can use a combination of CSS and JavaScript. Here&amp;rsquo;s a basic example:
+HTML&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span> &lt;span class="na">lang&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;en&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;UTF-8&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;viewport&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Sticky Header Example&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;styles.css&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">header&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;header&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">nav&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Home&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>About&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Services&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Contact&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">nav&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">header&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">section&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Welcome to Our Website&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Content goes here...&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">section&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;script.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>CSS (styles.css)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">body&lt;/span>&lt;span class="o">,&lt;/span> &lt;span class="nt">html&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">font-family&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Arial&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">sans-serif&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">header&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#333&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">white&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">fixed&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">z-index&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">transition&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="k">background-color&lt;/span> &lt;span class="mf">0.3&lt;/span>&lt;span class="kt">s&lt;/span> &lt;span class="kc">ease&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">header&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">sticky&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#000&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">header&lt;/span> &lt;span class="nt">nav&lt;/span> &lt;span class="nt">ul&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">list-style&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">flex&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">justify-content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">header&lt;/span> &lt;span class="nt">nav&lt;/span> &lt;span class="nt">ul&lt;/span> &lt;span class="nt">li&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">header&lt;/span> &lt;span class="nt">nav&lt;/span> &lt;span class="nt">ul&lt;/span> &lt;span class="nt">li&lt;/span> &lt;span class="nt">a&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">white&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">text-decoration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">16&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">main&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin-top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">70&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/* To avoid content overlap with the sticky header */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>JavaScript (script.js)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">Copy&lt;/span> &lt;span class="nx">code&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;scroll&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">header&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;header&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">sticky&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">header&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">offsetTop&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">pageYOffset&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="nx">sticky&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">header&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;sticky&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">header&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">remove&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;sticky&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Explanation&lt;/p>
+&lt;ol>
+&lt;li>HTML Structure: A basic structure with a header and main content.&lt;/li>
+&lt;li>CSS:&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>header is styled to be fixed at the top of the page with a dark background.&lt;/li>
+&lt;li>.sticky class changes the background color of the header when it becomes sticky.&lt;/li>
+&lt;li>main has a top margin to prevent content from being hidden under the header.&lt;/li>
+&lt;/ul>
+&lt;ol start="3">
+&lt;li>JavaScript:&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>The script adds a sticky class to the header when the user scrolls past the header&amp;rsquo;s initial position.&lt;/li>
+&lt;li>This script listens to the scroll event and checks the page&amp;rsquo;s Y offset.&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/details>
+&lt;details>
+&lt;summary>OpenAI API Response&lt;/summary>
+&lt;div>&lt;p>Certainly! Below is a basic example of how to create a sticky header using HTML, CSS, and JavaScript.&lt;/p>
+&lt;h3 id="html">HTML&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span> &lt;span class="na">lang&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;en&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;UTF-8&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;viewport&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Sticky Header&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;styles.css&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">header&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;header&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Sticky Header&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">header&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- Repeat the paragraph or add more content to create a scrollable page --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;scripts.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="css-stylescss">CSS (styles.css)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">body&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">font-family&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Arial&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">sans-serif&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">header&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#333&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">white&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">sticky&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/* CSS `position: sticky` makes the header sticky */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/* The header sticks to the top */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">z-index&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/* Ensures the header is above other content */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">transition&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">top&lt;/span> &lt;span class="mf">0.3&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">main&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">p&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="javascript-scriptsjs">JavaScript (scripts.js)&lt;/h3>
+&lt;p>No JS is strictly required for a sticky header, but you might want to add some JS for additional functionality, such as hiding the header on scroll down and showing it on scroll up. Here&amp;rsquo;s an example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;DOMContentLoaded&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">header&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;header&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">lastScrollY&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">scrollY&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;scroll&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">scrollY&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="nx">lastScrollY&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// Scrolling down, hide the header
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">header&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">top&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;-60px&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// Adjust the value to match the header height
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// Scrolling up, show the header
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">header&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">top&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;0&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">lastScrollY&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">scrollY&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="explanation">Explanation:&lt;/h3>
+&lt;ol>
+&lt;li>&lt;strong>HTML&lt;/strong>: Defines the structure with a &lt;code>header&lt;/code> and &lt;code>main&lt;/code> content.&lt;/li>
+&lt;li>&lt;strong>CSS&lt;/strong>:
+&lt;ul>
+&lt;li>&lt;code>position: sticky&lt;/code> with &lt;code>top: 0&lt;/code> makes the header stick to the top of the page.&lt;/li>
+&lt;li>&lt;code>z-index: 1000&lt;/code> ensures the header stays above other content.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>JavaScript&lt;/strong>: Adds interactivity to hide the header when scrolling down and show it when scrolling up, using the scroll event listener and comparing the current scroll position with the previous one.&lt;/li>
+&lt;/ol>
+&lt;p>This is a very basic example. Depending on your project needs, you might have to make additional adjustments.&lt;/p>
+&lt;/div>
+&lt;/details>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>As you can see whilst the responses are not the same, the responses are of a similar quality. If I did not label which system the output came out of I think you would probably struggle to determine which system produced it.&lt;/p>
+&lt;h1 id="conclusion">Conclusion&lt;/h1>
+&lt;p>As you can see with very little effort I was able to implement a subscription-free, cost effective ChatGPT Plus alternative using the OpenAI API and Open WebUI. In an ideal world you would run the Open WebUI software on a server that only you had access to which I have done.&lt;/p>
+&lt;p>Whilst Open WebUI is a quality piece of software there are plenty of alternatives you could leverage to get a similar experience. The OpenAI API is doing the heavy lifting of answering your prompts whilst Open WebUI is providing you with a good interface to interact with it.&lt;/p></description></item><item><title>3 Weeks island hopping in Thailand</title><link>https://www.samtripp.co.uk/posts/3-weeks-island-hopping-in-thailand/</link><pubDate>Mon, 15 Jul 2024 22:10:00 +0100</pubDate><guid>https://www.samtripp.co.uk/posts/3-weeks-island-hopping-in-thailand/</guid><description>&lt;p>This blog post is just a collection of bullet points regarding mine and my wifes trip around Thailand. There is a lot of information online about this great country but it can be a problem to get accurate answers due to some of the information being quite dated. Hopefully my first hand experience will help someone.&lt;/p>
 &lt;h1 id="departing-uk-side">Departing UK side&lt;/h1>
 &lt;ul>
 &lt;li>Booked to fly with EVA AIR. With it being an overnight flight I was able to take a half day on the Friday ensure we made the most of our time.
