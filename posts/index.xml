@@ -6,7 +6,7 @@
 &lt;li>&lt;a href="https://docs.openwebui.com/">Open WebUI&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://platform.openai.com/">OpenAI API&lt;/a>.&lt;/li>
 &lt;/ul>
-&lt;h2 id="sign-up-to-openai-and-generate-an-api-key">Sign up to OpenAI and generate an API Key.&lt;/h2>
+&lt;h2 id="sign-up-to-openai-and-generate-an-api-key">Sign up to OpenAI and generate an API Key&lt;/h2>
 &lt;p>If you have not done so already create an account at &lt;a href="https://platform.openai.com/">https://platform.openai.com/&lt;/a>. Once you&amp;rsquo;ve done this navigate to the &lt;a href="https://platform.openai.com/api-keys">API Key Page&lt;/a>. There is a bizarre restriction which means you need to enter a mobile phone number before you can generate your first API Key. As this is only used one time, I purchased a sim card at the supermarket and registered that number against the account. Feel free to use your own personal phone number if you wish. Once this is done generate an API Key.&lt;/p>
 &lt;p>You need to go and add credit to your account to actually be able to use the API. To do this navigate to the billing page and add some credit to your account. I decided on just adding the minimum to my account which is $5 + VAT.&lt;/p>
 &lt;p>You now have an account and access to OpenAI&amp;rsquo;s API.&lt;/p>
@@ -14,7 +14,7 @@
 &lt;p>There are a number of ways to set up Open WebUI but the recommended process is using Docker so before you go any further ensure you have got this set up. Once that has been completed run the command below. Make sure you&amp;rsquo;re replacing &lt;strong>&amp;lt;your_generated_api_key&amp;gt;&lt;/strong> with your OpenAI API key that you have generated.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-docker" data-lang="docker">&lt;span class="line">&lt;span class="cl">docker run -d -p 3000:8080 -e &lt;span class="nv">OPENAI_API_KEY&lt;/span>&lt;span class="o">=&lt;/span>&amp;lt;your_generated_api_key&amp;gt; -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main&lt;span class="err">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="start-prompting">Start prompting&lt;/h2>
-&lt;p>Navigate to &lt;a href="https://localhost:3000">https://localhost:3000&lt;/a> in your web browser. Create an account, login, select a model of your choice in the dropdown at the top left of the page and start using it as you would with ChatGPT. At the time of writing the gpt-4o-mini model is OpenAI&amp;rsquo;s most cost effective model.&lt;/p>
+&lt;p>Navigate to &lt;a href="http://localhost:3000">http://localhost:3000&lt;/a> in your web browser. Create an account, login, select a model of your choice in the dropdown at the top left of the page and start using it as you would with ChatGPT. At the time of writing the gpt-4o-mini model is OpenAI&amp;rsquo;s most cost effective model.&lt;/p>
 &lt;h1 id="how-does-it-compare">How does it compare&lt;/h1>
 &lt;h2 id="cost">Cost&lt;/h2>
 &lt;p>I created the prompt &amp;ldquo;Can you give me the number of workdays between December and April. I do not work weekends or UK bank holidays.&amp;rdquo; using the gpt-4o model and that costs approximately $0.01. You would have to put 2000 equivalent requests within a month to break even with the ChatGPT Plus subscription cost. If you put the same request through gpt-4o-mini it costs $0.0005 which means you would need to put 40000000 equivalent requests to break even.&lt;/p>
