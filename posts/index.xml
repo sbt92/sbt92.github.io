@@ -18,7 +18,7 @@
 &lt;h1 id="how-does-it-compare">How does it compare&lt;/h1>
 &lt;h2 id="cost">Cost&lt;/h2>
 &lt;p>I created the prompt &amp;ldquo;Can you give me the number of workdays between December and April. I do not work weekends or UK bank holidays.&amp;rdquo; using the gpt-4o model and that costs approximately $0.01. You would have to put 2000 equivalent requests within a month to break even with the ChatGPT Plus subscription cost. If you put the same request through gpt-4o-mini it costs $0.0005 which means you would need to put 40000000 equivalent requests to break even.&lt;/p>
-&lt;p>If you&amp;rsquo;re heavy user you may exceed the 2000 requests but if you&amp;rsquo;re a casual user such as myself then the API proves to be considerably better value than ChatGPT Plus. I would be surprised if many if any exceed the gpt-4o-mini break even cost.&lt;/p>
+&lt;p>If you&amp;rsquo;re heavy user you may exceed the 2000 requests but if you&amp;rsquo;re a casual user such as myself then the API proves to be considerably better value than ChatGPT Plus. I would be surprised if many exceed the gpt-4o-mini break even cost.&lt;/p>
 &lt;h2 id="convenience">Convenience&lt;/h2>
 &lt;p>ChatGPT Plus wins here but as you can see it does not take an awful lot of effort to get this up and running. Personally for me the small convenience sacrifice pays off considerably in terms of fiscal savings for the casual user.&lt;/p>
 &lt;h2 id="quality-of-response">Quality of response&lt;/h2>
