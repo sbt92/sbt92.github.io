@@ -350,56 +350,64 @@
 &lt;h1 id="no-open-source-didnt-destroy-my-creative-agency---ryan-gorley">No, Open Source Didn&amp;rsquo;t Destroy My Creative Agency - Ryan Gorley&lt;/h1>
 &lt;p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/OXocCVpVwUw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/OXocCVpVwUw?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+>&lt;/iframe>
 &lt;/div>
 &lt;a href="https://www.youtube.com/watch?v=OXocCVpVwUw">Watch on Youtube&lt;/a>&lt;/p>
 &lt;p>As someone who is not a creative it was truly inspirational to see Ryan advocating for the open source tools available in this space and is able to utilise them to make a living. The creative space is unfortunately dominated by proprietary offerings some which charge an extortionate amount monthly which can and probably has made creativity unreachable to many. I was able to speak to Ryan and other like minded people after the talk about whats available in this space and this exposed me to the &lt;a href="https://ubuntustudio.org/">Ubuntu Studio&lt;/a> distribution which I will be encouraging my wife who is a creative to try out.&lt;/p>
 &lt;h1 id="servo-building-a-browser-rendering-engine-in-rust---rakhi-sharma">Servo: Building a Browser Rendering Engine in Rust - Rakhi Sharma&lt;/h1>
 &lt;p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/fp5n7CSvALA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/fp5n7CSvALA?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+>&lt;/iframe>
 &lt;/div>
 &lt;a href="https://www.youtube.com/watch?v=fp5n7CSvALA">Watch on Youtube&lt;/a>&lt;/p>
 &lt;p>This talk was quite conveniently timed as I&amp;rsquo;ve only been aware of Servo since Mozilla once again shot themselves in the foot with their &lt;a href="https://blog.mozilla.org/en/mozilla/improving-online-advertising/">advertising blog post&lt;/a>. Quite a remarkable undertaking to achieve what they have so far with this browser engine. I hope it continues and secures the necessary funding so we can enjoy greater choice in browsers. This talk and Servo itself gives me hope that we will have another choice in the future.&lt;/p>
 &lt;h1 id="engineering-cosmic-de-a-vision-realized---carl-richell-victoria-brekenfeld">Engineering COSMIC DE: A Vision Realized - Carl Richell, Victoria Brekenfeld&lt;/h1>
 &lt;p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/bwrBKccfYws" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bwrBKccfYws?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+>&lt;/iframe>
 &lt;/div>
 &lt;a href="https://www.youtube.com/watch?v=bwrBKccfYws">Watch on Youtube&lt;/a>&lt;/p>
 &lt;p>It was great to see what the folks at System76 have been able to achieve with the COSMIC Desktop Environment. For an Alpha product it was quite incredible how stable and usable it was. What I did appreciate about this talk was the honesty that there will be bugs and being upfront about these bugs. Whilst I am very happy with the GNOME Desktop Environment at the moment I would certainly be keeping a close eye on COSMIC and would be tempted to try it out in the near future.&lt;/p>
 &lt;h1 id="master-advanced-anti-ban--web-scraping-techniques---fabien-vauchelles">Master Advanced Anti-Ban &amp;amp; Web Scraping Techniques - Fabien Vauchelles&lt;/h1>
 &lt;p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/v_QCFThIW3Y" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/v_QCFThIW3Y?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+>&lt;/iframe>
 &lt;/div>
 &lt;a href="https://www.youtube.com/watch?v=v_QCFThIW3Y">Watch on Youtube&lt;/a>&lt;/p>
 &lt;p>Having dabbled in some scraping myself I have hit a few issues in the past that have blocked me from scraping. This workshop exposed me to &lt;a href="https://scrapoxy.io/">scrapoxy&lt;/a> and I got the chance to try it hands on against a demo site using come common techniques to circumvent some of the common blocks implemented. I also fully appreciated the workshop being available on &lt;a href="https://github.com/fabienvauchelles/scraping-workshop">Github&lt;/a> for future reference.&lt;/p>
 &lt;h1 id="open-platform-for-enterprise-ai---christian-holsing">Open Platform for Enterprise AI - Christian Holsing&lt;/h1>
 &lt;p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/cTjIYHLtw48" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/cTjIYHLtw48?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+>&lt;/iframe>
 &lt;/div>
 &lt;a href="https://www.youtube.com/watch?v=cTjIYHLtw48">Watch on Youtube&lt;/a>&lt;/p>
 &lt;p>As someone who is currently working on an AI project, I fully appreciated what the &lt;a href="https://opea.dev/">OPEA&lt;/a> project is trying to achieve here. Due to the rapid movement of the various AI ecosystem standards are lacking and everyone is implementing their solutions in their own way. The frameworks and blueprints that OPEA are creating is utilising open standards and technologies to create a open platform for GenAI. The project has contributions from some of the biggest industry players involved in AI so its something I will certainly be keeping a close eye on.&lt;/p>
 &lt;h1 id="rocm-for-amd-gpus-on-ubuntu---cordell-bloor">ROCm for AMD GPUs on Ubuntu - Cordell Bloor&lt;/h1>
 &lt;p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/sUnZDYvfceE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/sUnZDYvfceE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+>&lt;/iframe>
 &lt;/div>
 &lt;a href="https://www.youtube.com/watch?v=sUnZDYvfceE">Watch on Youtube&lt;/a>&lt;/p>
 &lt;p>This talk introduced me to AMD ROCm and the considerable amount of work being done by Cordell and the community to support a wider range of AMD GPU support for AI/ML workloads. It is excellent to see the work being done here will enable a wider range of devices and as a result will enable greater competition in the GPU market for AI/ML purposes.&lt;/p>
 &lt;h1 id="harnessing-htcondor-how-dreamworks-animation-orchestrates-massive-workloads-for-feature-films---mark-jackels">Harnessing HTCondor: How DreamWorks Animation Orchestrates Massive Workloads for Feature Films - Mark Jackels&lt;/h1>
 &lt;p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/X3XQPqS_OCU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/X3XQPqS_OCU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+>&lt;/iframe>
 &lt;/div>
 &lt;a href="https://www.youtube.com/watch?v=X3XQPqS_OCU">Watch on Youtube&lt;/a>&lt;/p>
 &lt;p>It was quite impressive to see the insights on how an animation studio structures and distributes its workload across 1800 workstations using HTCondor. Gives me a greater appreciation for the raw power required to produced some of the latest and greatest blockbuster animation movies. Can&amp;rsquo;t see me using this as I do not have a blockbuster budget but nevertheless was incredible to see the capabilities of this piece of free and open source software.&lt;/p>
 &lt;h1 id="framework-lightning-talk---nirav-patel">Framework Lightning Talk - Nirav Patel&lt;/h1>
 &lt;p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/l6khGznGeyY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/l6khGznGeyY?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+>&lt;/iframe>
 &lt;/div>
 &lt;a href="https://www.youtube.com/watch?v=l6khGznGeyY">Watch on Youtube&lt;/a>&lt;/p>
 &lt;p>Managing to swap your laptop hardware from x86 to RISC-V architecture in the space of a 5 minute lightning talk. I was amazed that it could be done. A true credit to the Framework brand. Certainly deserved the standing ovation they got for achieving this. They will certainly be on my radar when I am due a laptop refresh.&lt;/p></description></item><item><title>Creating a subscription-free ChatGPT Plus alternative</title><link>https://www.samtripp.co.uk/posts/creating-a-subscription-free-chatgpt-plus-alternative/</link><pubDate>Tue, 30 Jul 2024 08:00:00 +0100</pubDate><guid>https://www.samtripp.co.uk/posts/creating-a-subscription-free-chatgpt-plus-alternative/</guid><description>&lt;p>AI has taken the world by storm over the past 18 months with many people utilising it in many ways. One of the most popular ways of interacting with AI is using ChatGPT. Like most modern software OpenAI&amp;rsquo;s ChatGPT offers a free tier as well as their subscription called ChatGPT Plus which offers more features and a selection of Large Language Models.&lt;/p>
@@ -966,35 +974,40 @@ HTML&lt;/p>
 &lt;h1 id="cli-application-development-made-easier-with-typer--vinícius-gubiani-ferreira">CLI application development made easier with typer — Vinícius Gubiani Ferreira&lt;/h1>
 &lt;p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/bLTwNZiMLBE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bLTwNZiMLBE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+>&lt;/iframe>
 &lt;/div>
 &lt;a href="https://www.youtube.com/watch?v=bLTwNZiMLBE">Watch on Youtube&lt;/a>&lt;/p>
 &lt;p>This talk introduced me to the Typer library. As someone who has built CLI&amp;rsquo;s in the past using such libraries as Argparse and Fire, I quickly discovered that Typer is a game changer. You can get a CLI app running in no time at all using this. I created a proof of concept CLI thanks to this talk. If I was to make a CLI application in the future this would be my go to library.&lt;/p>
 &lt;h1 id="optimizing-your-ci-pipelines--sebastian-witowski">Optimizing Your CI Pipelines — Sebastian Witowski&lt;/h1>
 &lt;p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/goWcDalv_FQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/goWcDalv_FQ?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+>&lt;/iframe>
 &lt;/div>
 &lt;a href="https://www.youtube.com/watch?v=goWcDalv_FQ">Watch on Youtube&lt;/a>&lt;/p>
 &lt;p>This talk could not have come at a more appropriate time for me, as when I returned to work I was going to have to spend a lot of time creating pipelines. Some solid advice and recommendations around pipeline creation that I was able to utilise immediately.&lt;/p>
 &lt;h1 id="pip-install-malware--max-kahan">pip install malware — Max Kahan&lt;/h1>
 &lt;p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/hfoCh4yuJpo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/hfoCh4yuJpo?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+>&lt;/iframe>
 &lt;/div>
 &lt;a href="https://www.youtube.com/watch?v=hfoCh4yuJpo">Watch on Youtube&lt;/a>&lt;/p>
 &lt;p>Nothing in this talk was a great shock to me. Plenty of bad actors are deploying malicious packages on PyPI. That being said it was a very well presented talk and is a great reminder to not just blindly install anything off the internet. The key takeway could extend beyond the Python ecosystem.&lt;/p>
 &lt;h1 id="designing-a-human-friendly-cli-for-api-driven-infrastructure--oliver-rew">Designing a Human-Friendly CLI for API-Driven Infrastructure — Oliver Rew&lt;/h1>
 &lt;p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/6LeB5j331bU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/6LeB5j331bU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+>&lt;/iframe>
 &lt;/div>
 &lt;a href="https://www.youtube.com/watch?v=6LeB5j331bU">Watch on Youtube&lt;/a>&lt;/p>
 &lt;p>A great talk discussing closely coupled API&amp;rsquo;s and autogenerated CLI&amp;rsquo;s based off the API documentation. I can think of plenty of times in the past where I would have benefitted from such tooling. The only downside is that this tool is not publicly available, however the insight into well designed tooling was valuable.&lt;/p>
 &lt;h1 id="from-idea-to-production--honza-král">From idea to production — Honza Král&lt;/h1>
 &lt;p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/02XHM_XvsWs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/02XHM_XvsWs?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+>&lt;/iframe>
 &lt;/div>
 &lt;a href="https://www.youtube.com/watch?v=02XHM_XvsWs">Watch on Youtube&lt;/a>&lt;/p>
 &lt;p>A self declared opinionated checklist for going from an idea into production. The example given was for a Django website but I would say it could be applied to most development projects. Key point to note is setting ideas up with the necessary tooling to succeed from the beginning will save a lot of pain retrofitting it once you&amp;rsquo;ve gone to production.&lt;/p>
